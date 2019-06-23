@@ -1,0 +1,28 @@
+body {
+    background: thistle;
+}
+
+.box {
+    padding: 15px;
+}
+
+.green {
+    background-color: greenyellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.purple {
+    background-color: purple;
+    height: 50px;
+    margin-top: 15px;
+    margin-bottom  : 15px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
