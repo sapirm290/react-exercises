@@ -1,22 +1,20 @@
-class Factorial extends React.Component {
-    calcFactorial(num) {
-        let result = 1;
-        for (let index = 1; index <= num; index++) {
-            result *= index;
+function render(data) {
+    ReactDom.render(<div>
+        <a classname="border" href={data.linkAddress}>Go to {data.linkText}</a>
+        <input type="range" min={data.min * -1} max={data.max * 2} step="2"></input>
+        <button id="click" style={{ "color": data.color, "font-weight": data.font - weight }}>{data.buttonText}</button>
 
-        }
 
-        return result;
-    }
-    render() {
-        let sum = this.calcFactorial(5)
-        return (<div><h1>Factorial 5 is:</h1><h3>{sum}</h3></div>
-        );
-    }
+
+    </div>, document.getElementById("root"));
 }
-
-
-ReactDOM.render(
-    <Factorial></Factorial>,
-    document.getElementById("root")
-);
+var data = {
+    linkAddress: "https://www.google.com/",
+    linkText: "google",
+    min: -5,
+    max: 5,
+    color: "maroon",
+    "font-weight": "bold",
+    buttonText: "click me"
+};
+render(data);
