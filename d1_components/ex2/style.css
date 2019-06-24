@@ -13,7 +13,7 @@ ul li {
 
 .navbar img {
     position: absolute;
-    right: 15%;
+    right: 50px;
     display: inline-block;
 }
 
@@ -21,10 +21,12 @@ ul li {
     background-color: #EF7D73;
     color: #ffffff;
 }
-.content{
+
+.content {
     display: inline-block;
     margin: 5%;
 }
+
 .navbar {
     text-align: left;
 }
