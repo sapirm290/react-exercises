@@ -21,7 +21,3 @@ class NumberDisplay extends React.Component {
         )
     }
 }
-ReactDOM.render(
-    <NumberDisplay></NumberDisplay>,
-    document.getElementById("root")
-);

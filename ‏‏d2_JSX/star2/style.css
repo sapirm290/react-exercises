@@ -1,0 +1,48 @@
+body {
+    font-weight: 550;
+    border: 2px solid black;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.navbar {
+    text-align: left;
+}
+
+ul li {
+    display: inline-block;
+    margin: 15px;
+    color: #555555;
+}
+
+.navbar img {
+    position: absolute;
+    right: 50px;
+    display: inline-block;
+}
+
+.article {
+    background-color: #EF7D73;
+    color: #ffffff;
+    height: 100vh;
+}
+
+.content {
+    display: inline-block;
+    margin: 5%;
+}
+
+.content img {
+    border-radius: 15px;
+    width: 250px;
+    height: 250px;
+    background-color: #dedede;
+}
+
+.underLine {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}

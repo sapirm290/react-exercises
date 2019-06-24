@@ -1,11 +1,8 @@
 function render(data) {
-    ReactDom.render(<div>
-        <a classname="border" href={data.linkAddress}>Go to {data.linkText}</a>
+    ReactDOM.render(<div>
+        <a className="border" href={data.linkAddress} target="_blank">Go to {data.linkText}</a>
         <input type="range" min={data.min * -1} max={data.max * 2} step="2"></input>
-        <button id="click" style={{ "color": data.color, "font-weight": data.font - weight }}>{data.buttonText}</button>
-
-
-
+        <button id="click" style={{ color: data.color, "font-weight": data["font-weight"] }}>{data.buttonText}</button>
     </div>, document.getElementById("root"));
 }
 var data = {
