@@ -1,13 +1,15 @@
+.main{
+    display: flex;
+    justify-content: space-around;
+}
 body {
     background: silver;
 }
 
 .card {
+    flex-basis: 25%;
     text-align: center;
-    position: relative;
-    max-width: 250px;
     margin: 20px;
-    padding: 15px;
     background-color: white;
     display: inline-block;
     border-radius: 15px;

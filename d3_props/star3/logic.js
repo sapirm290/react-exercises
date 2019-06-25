@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
-/* eslint-disable react/react-in-jsx-scope */
 const App = () => {
   return (
     <div>
@@ -19,7 +16,7 @@ const App = () => {
     </div>
   )
 }
-const Box = ({ size, position, childern }) => {
+const Box = ({ size, position}) => {
   let style = {
     display: (position === "next" ? "inline-block" : "block"),
     height: (size+"px"),

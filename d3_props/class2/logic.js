@@ -2,12 +2,11 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Box bGColor="green" text="fresh"></Box>
-                <Box bGColor="blue" text="calm"></Box>
+                <Box bGColor="mediumspringgreen" text="fresh"></Box>
+                <Box bGColor="deepskyblue" text="calm"></Box>
                 <Box bGColor="pink" text="adventerous"></Box>
                 <Box bGColor="purple" text="happy"></Box>
             </div>
-
         )
     }
 }

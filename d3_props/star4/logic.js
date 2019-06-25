@@ -31,7 +31,6 @@ class ColorSelector extends React.Component {
           <span style={{ color: this.state.color }}>{this.state.color}</span>
         </h2>
       </div >
-
     )
   }
 }

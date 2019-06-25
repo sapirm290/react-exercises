@@ -1,6 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
-/* eslint-disable react/react-in-jsx-scope */
 const App = () => {
   return (
     <div>
@@ -25,11 +22,13 @@ const NavBar = () => {
 }
 
 const MainContent = () => {
-  return (<div className="article">
+  return (<div className="mainContent">
     <Hero></Hero>
+    <div className="services">
     <Service title="User Interface Design" image="browser">Aliqua eu Lorem non ut irure<br /> sunt adipisicing sint t<br />empor velit.</Service>
     <Service title="Concept and Ideas" image="pencil">Sit est id ipsum u<br />t ea occaecat laborum enim<br /> culpa qui.</Service>
     <Service title="Design and branding" image="letter">Do incididunt culpa al<br />iquip do pariatur pariatu<br />r nulla nulla eu in ad excepteur minim veniam.</Service>
+    </div>
   </div>)
 }
 
@@ -41,11 +40,12 @@ const Hero = () => {
 }
 
 const Service = ({ title, image, children }) => {
-  return (<div className="service" >
+  return (<div className="service">
     <Icon image={image} ></Icon>
     <Description title={title} text={children}></Description>
   </div >)
 }
+
 const Icon = ({image}) => {
   function changeBG(e) {
     e.target.style.background = "#C577CA";
@@ -57,11 +57,12 @@ const Icon = ({image}) => {
     <img onMouseEnter={changeBG} onMouseLeave={changeBGBack} src={`./images/${image}.png`}></img>
   )
 }
+
 const Description = ({title, text}) => {
   function secBorder(e) {
     let elem = e.target
-    elem.style.border = "5px solid #ffffff"
-    setTimeout(() => { elem.style.border = "none" }, 1000);
+    elem.style.outline = "5px solid #ffffff"
+    setTimeout(() => { elem.style.outline = "none" }, 1000);
   }
   return (
     <div>

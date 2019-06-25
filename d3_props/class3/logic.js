@@ -2,8 +2,8 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Box bGColor="green">
-                    <Box bGColor="blue">
+                <Box bGColor="mediumspringgreen">
+                    <Box bGColor="deepskyblue">
                         <Box bGColor="pink">
                             <Box bGColor="purple"></Box>
                             <Box bGColor="purple"></Box>

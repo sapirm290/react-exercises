@@ -1,7 +1,4 @@
 class Title extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         var style = {
             "fontFamily": this.props.font
@@ -21,6 +18,7 @@ class App extends React.Component {
         );
     }
 }
+
 function render() {
     ReactDOM.render(
         <App />,
