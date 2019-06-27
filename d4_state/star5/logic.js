@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
 const App = () => {
   return (
     <div>
@@ -17,9 +19,10 @@ const NavBar = () => {
     </ul>
   </div>)
 }
-const ListItem = () => {
-  return(
-    <li></li>
+const ListItem = ({ children }) => {
+  const [isBold, setIsBold] = React.useState(false)
+  return (
+    <li onClick={() => { setIsBold(true) }} style={{ fontWeight: isBold ? "bold" : "normal" }}>{children}</li>
   )
 }
 const MainContent = () => {
@@ -48,28 +51,29 @@ const Service = ({ title, image, children }) => {
 }
 
 const Icon = ({ image }) => {
-  function changeBG(e) {
-    e.target.style.background = "#C577CA";
-  }
-  function changeBGBack(e) {
-    e.target.style.background = "#dedede";
-  }
+  const [isPurpleBG, setIsPurpleBG] = React.useState(false)
   return (
-    <img onMouseEnter={changeBG} onMouseLeave={changeBGBack} src={`./images/${image}.png`}></img>
+    <img onMouseEnter={() => { setIsPurpleBG(true) }} onMouseLeave={() => { setIsPurpleBG(false) }}
+      style={{ backgroundColor: isPurpleBG ? "#C577CA" : "#dedede" }} src={`./images/${image}.png`}></img>
   )
 }
 
 const Description = ({ title, text }) => {
-  function secBorder(e) {
-    let elem = e.target
-    elem.style.outline = "5px solid #ffffff"
-    setTimeout(() => { elem.style.outline = "none" }, 1000);
-  }
   return (
     <div>
-      <h2 onMouseEnter={secBorder}>{title}</h2>
+      <ServiceTitle>{title}</ServiceTitle>
       <h4>{text}</h4>
     </div>
+  )
+}
+const ServiceTitle = ({ children }) => {
+  const [border, setBorder] = React.useState(false);
+  const handleHover = () => {
+    setBorder(true);
+    setTimeout(() => { setBorder(false) }, 1000);
+  }
+  return (
+    <h1 style={{border: border? "5px solid #ffffff" : "none"}} onMouseOver={handleHover}>{children}</h1>
   )
 }
 
