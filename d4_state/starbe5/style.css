@@ -1,0 +1,50 @@
+body {
+    font-weight: 550;
+    border: 2px solid black;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.navbar {
+    text-align: left;
+}
+.services{
+    display: flex;
+}
+
+ul li {
+    display: inline-block;
+    margin: 15px;
+    color: #555555;
+}
+
+.navbar img {
+    position: absolute;
+    right: 50px;
+    display: inline-block;
+}
+
+.mainContent {
+    background-color: #EF7D73;
+    color: #ffffff;
+    height: 100vh;
+}
+
+.service {
+    display: inline-block;
+    flex-basis: 30%
+}
+
+.service img {
+    border-radius: 15px;
+    height: 250px;
+    background-color: #dedede;
+}
+
+.underLine {
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
