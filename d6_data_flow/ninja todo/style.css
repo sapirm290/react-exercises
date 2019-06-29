@@ -1,0 +1,10 @@
+body{
+    background-color: darkcyan;
+}
+.cell{
+    display: inline-block;
+    margin: 15px;
+    background-color: azure;
+    height: 200px;
+    width: 200px;
+}

@@ -1,0 +1,14 @@
+.outerBox{
+    display: inline-block;
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+}
+.box{
+width: 60%;
+height: 60%;
+margin: auto;
+}
+.hidden{
+    display: none;
+}

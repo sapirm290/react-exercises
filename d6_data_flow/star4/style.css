@@ -1,0 +1,10 @@
+body{
+    background-color: darkcyan;
+}
+.category{
+    color: #ffffff;
+}
+select{
+    background-color: darksalmon;
+    border-radius: 5px;
+}
