@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div>
       <Category title="Category" handleChange={setCurrentCategory} data={categoryData}></Category>
-      <Category title="Sub category" handleChange={() => { }} data={subCategoryData}></Category>
+      <Category title="Sub category" handleChange={() => { return false}} data={subCategoryData}></Category>
     </div>
   )
 }

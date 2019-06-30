@@ -1,17 +1,20 @@
-const colors = ["springgreen", "paleturquoise", "pink","orchid"]
-const App = ({colors}) => {
+const colors = ["springgreen", "paleturquoise", "pink", "orchid"]
+const App = ({ colors }) => {
+  const boxesArray = [];
+  for (let index = 0; index < colors.length; index++) {
+    boxesArray.push(
+      <Box bGColor={colors[index]}></Box>
+    )
+  }
   return (
     <div>
-      <Box bGColor={colors[0]}></Box>
-      <Box bGColor={colors[1]}></Box>
-      <Box bGColor={colors[2]}></Box>
-      <Box bGColor={colors[3]}></Box>
+      {boxesArray}
     </div>
   );
 }
-const Box = ({bGColor}) => {
-  return(
-    <div className="box" style={{backgroundColor: bGColor}}>
+const Box = ({ bGColor }) => {
+  return (
+    <div className="box" style={{ backgroundColor: bGColor }}>
     </div>
   )
 }

@@ -18,7 +18,7 @@ const App = () => {
       <QuestionDiv options={cityOptions} handleChange={chooseCountry}></QuestionDiv>
       {(showCity ?
         <QuestionDiv options={data[country]} handleChange={(e) => { setCity(e.target.value) }}></QuestionDiv>
-        : false)}
+        : null)}
     </div>
   )
 }
