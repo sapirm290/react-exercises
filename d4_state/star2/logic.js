@@ -13,9 +13,9 @@ const App = () => {
     )
 }
 const ColorChoice = ({ val }) => {
-    const [fade, setFade] = React.useState(false)
+    const [isDisabled, setIsDisabled] = React.useState(false)
     return (
-        <button style={{opacity: fade?"0.4":"1"}} onClick={() => {setFade(true)}}>{val}</button>
+        <button style={{opacity: isDisabled? "0.4": "1"}} disabled={isDisabled} onClick={() => {setIsDisabled(true)}}>{val}</button>
     )
 }
 ColorChoice.propTypes = {
