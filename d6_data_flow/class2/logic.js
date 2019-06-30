@@ -1,16 +1,17 @@
 const App = () => {
-  const [isOuterColorWhite, setIsOuterColorWhite] = React.useState(false);
+  const [outerBoxColor, setOuterBoxColor] = React.useState("#ffffff");
   return (
-    <Box
-      bGColor={isOuterColorWhite ? "white" : "pink"} >
-      <Box bGColor="MEDIUMSPRINGGREEN">
-        <Box
+    <Box handleClick={setOuterBoxColor}
+      bGColor={outerBoxColor} >
+      <Box bGColor="MEDIUMSPRINGGREEN"
+        handleClick={setOuterBoxColor}>
+        <Box handleClick={setOuterBoxColor}
           bGColor="DARKTURQUOISE">
-          <Box setIsOuterColorWhite={setIsOuterColorWhite}
+          <Box handleClick={setOuterBoxColor}
             bGColor="LIGHTPINK">
-            <Box setIsOuterColorWhite={setIsOuterColorWhite}
+            <Box handleClick={setOuterBoxColor}
               bGColor="VIOLET"></Box>
-            <Box setIsOuterColorWhite={setIsOuterColorWhite}
+            <Box handleClick={setOuterBoxColor}
               bGColor="VIOLET"></Box>
           </Box>
         </Box>
@@ -18,13 +19,15 @@ const App = () => {
     </Box >
   )
 }
-const Box = ({ bGColor, setIsOuterColorWhite, children }) => {
-  const handleChange = () => {
-    if (setIsOuterColorWhite != undefined)
-      setIsOuterColorWhite(true)
+const Box = ({ bGColor, handleClick, children }) => {
+  const handleClickIfExist = (e) => {
+    e.stopPropagation();
+    if (handleClick != undefined)
+      handleClick(bGColor);
   }
   return (
-    <div className="box" style={{ backgroundColor: bGColor }} onClick={handleChange}>
+    <div className="box" style={{ backgroundColor: bGColor }}
+      onClick={handleClickIfExist}>
       {children}
     </div >
   )
