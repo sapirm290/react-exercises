@@ -1,0 +1,12 @@
+body{
+    background-color: darksalmon;
+}
+.box{
+    display: block;
+    width: 100px;
+    margin-right: 70px;
+    height: 150px;
+}
+.wrapper{
+    display: inline-block;
+}

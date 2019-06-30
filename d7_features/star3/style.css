@@ -1,0 +1,12 @@
+.main{
+    display: inline-block;
+    width: 250px;
+    height: 500px;
+    border: 1px solid gray;
+    background-color: teal;
+}
+li, h1{
+    color: white;   
+    font-weight: 550;
+    font-size: 1.5rem;
+}

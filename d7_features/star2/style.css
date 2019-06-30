@@ -1,0 +1,13 @@
+.main{
+    display: inline-block;
+    width: 250px;
+    height: 500px;
+    border: 1px solid gray;
+    background-color: teal;
+}
+.selectElement{
+    margin-top: 10px;
+}
+select{
+    background-color: darksalmon;
+}
