@@ -1,37 +1,21 @@
-const App = () => {
-  return (
-    <div>
-      <Box></Box>
-    </div>
-  )
-}
-class Box extends React.Component {
+
+class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state ={color: "red"};
-    console.log("constructor " + " is called")
-    this.changeBG = this.changeBG.bind(this);
+    this.state = { isBoxShown: false }
   }
-  componentWillMount(){
-    console.log("will mount " + " is called")
-    setInterval(this.changeBG, 500);
-  }
-  componentDidMount(){
-    console.log("did mount " + " is called")
-  }
-  shouldComponentUpdate(){
-    return true;
-  }
-  changeBG(){
-    this.setState({color: this.state.color === "red" ? "blue" : "red"})
+  componentDidMount() {
+    setTimeout(
+      () => { this.setState({ isBoxShown: true }) },
+      1000)
+    setTimeout(
+      () => { this.setState({ isBoxShown: false }) },
+      5000)
   }
   render() {
-    console.log("render " + " is called")
-    return (
-      <div>
-        <span style={{backgroundColor: this.state.color}}></span>
-      </div>
-    )
+    return this.state.isBoxShown ? (
+      <div className="box">Hello Everybody</div>
+    ) : null
   }
 }
 

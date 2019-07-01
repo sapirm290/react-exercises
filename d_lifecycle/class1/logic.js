@@ -1,27 +1,38 @@
 const App = () => {
   return (
     <div>
-      <Box bGColor="teal"></Box>
-      <Box bGColor="red"></Box>
+      <Box></Box>
     </div>
   )
 }
 class Box extends React.Component {
   constructor(props) {
     super(props);
-    console.log("constructor " + this.props.bGColor + " is called")
+    this.state = { color: "red", bRadius: "0%" };
+    this.counter = 0;
+    this.changeBGAndShape = this.changeBGAndShape.bind(this);
   }
-  componentWillMount(){
-    console.log("will mount " + this.props.bGColor + " is called")
+  componentDidMount() {
+    this.colorChangeInterval = setInterval(this.changeBGAndShape, 500);
   }
-  componentDidMount(){
-    console.log("did mount " + this.props.bGColor + " is called")
+  componentDidUpdate() {
+    if (this.counter > 6)
+      ReactDOM.unmountComponentAtNode(document.getElementById("root"));
+
+  }
+  changeBGAndShape() {
+    this.setState({ color: this.state.color === "red" ? "blue" : "red" });
+    this.counter++;
+    if (this.counter > 5)
+      this.setState({ bRadius: "50%" })
+  }
+  componentWillUnmount() {
+    clearInterval(this.colorChangeInterval);
   }
   render() {
-    console.log("render " + this.props.bGColor + " is called")
     return (
       <div>
-        <span style={{backgroundColor: this.props.bGColor}}></span>
+        <span style={{ backgroundColor: this.state.color, borderRadius: this.state.bRadius }}></span>
       </div>
     )
   }

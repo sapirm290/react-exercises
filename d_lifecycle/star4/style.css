@@ -1,0 +1,34 @@
+.task{
+    display: inline-block;
+    background-color: lightblue;
+    margin: 15px;
+    text-align: center;
+
+}
+.task-title{
+    color: #ffffff;
+    padding: 5px;
+    margin: 0;
+    background-color: darkslateblue;
+}
+.circle{
+    display: inline-block;  
+    /* margin: 15px; */
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: cadetblue;
+}
+.progress-bar{
+    height: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid #bbbbbb;
+    text-align: left;
+}
+.progress{
+    display: inline-block;
+    height: 100%;
+
+}
